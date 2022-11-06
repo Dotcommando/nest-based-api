@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "6af39539-fbbd-416c-b59b-195a22992381",
+		"name": "Articles Basics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5673578"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"isaac\",\n    \"lastName\": \"Asimov\",\n    \"username\": \"i.asimov\",\n    \"email\": \"isaac.asimov@gmail.com\",\n    \"password\": \"125xdcw0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ENV}}/api/v1/users/one",
+					"host": [
+						"{{ENV}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"one"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ENV}}/api/v1/users/one/:_id",
+					"host": [
+						"{{ENV}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"one",
+						":_id"
+					],
+					"variable": [
+						{
+							"key": "_id",
+							"value": "6366894e1c11c4f06d1a5227"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ENV",
+			"value": "http://localhost:9000",
+			"type": "string"
+		}
+	]
+}

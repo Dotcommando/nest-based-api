@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+
+  delivery-mongo:
+    image: mongo
+    command: [ "--bind_ip", "0.0.0.0" ]
+    restart: always
+    env_file: .env
+    ports:
+      - "27037:27017"
