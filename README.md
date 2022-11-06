@@ -6,6 +6,12 @@
 
 [Nest](https://github.com/nestjs/nest) based example of API.
 
+Ports in use: **9000**, **9001**, **27037**.
+
+Microservice `gateway` contains only ts code. It works on **9000** port, so check if the port is not in use on your machine.
+
+Microservice `users` contains Mongo DB in docker image and ts code which works on **9001** port. Mongo DB especially runs on **27037** instead of standard 27017 port. This is to avoid conflict with your current project with Mongo in case you have one. 
+
 ## Installation
 
 In each microservice (`gateway` and `users` folders) rename `.env.example` to `.env`. To run gateway:
